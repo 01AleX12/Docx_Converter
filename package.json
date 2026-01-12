@@ -1,0 +1,16 @@
+{
+  "name": "docx-html-cleaner",
+  "version": "1.0.0",
+  "main": "server.cjs",
+  "scripts": {
+    "start": "node server.cjs"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "express": "^4.19.0",
+    "js-beautify": "^1.15.0",
+    "jsdom": "^24.0.0",
+    "mammoth": "^1.7.0",
+    "multer": "^1.4.5-lts.1"
+  }
+}

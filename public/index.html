@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversor DOCX → HTML</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f7f7f7;
+      margin: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    input[type="file"] {
+      padding: 8px;
+    }
+
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #result-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    #copyBtn {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background-color: #28a745;
+      padding: 6px 14px;
+      font-size: 14px;
+    }
+
+    #copyBtn:hover {
+      background-color: #1e7e34;
+    }
+
+    pre {
+      background: #f0f0f0;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      font-family: "Courier New", monospace;
+      font-size: 14px;
+      line-height: 1.4;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <h1>Conversor DOCX → HTML</h1>
+
+  <form id="uploadForm">
+    <input type="file" id="docx" name="docx" accept=".docx" />
+    <button type="submit">Convertir</button>
+  </form>
+
+  <div id="result-container" style="display:none;">
+    <button id="copyBtn">Copiar</button>
+    <pre id="result"></pre>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
